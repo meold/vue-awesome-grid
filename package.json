@@ -17,7 +17,7 @@
     "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "copyToExample": "yes | cp  dist/vue-awesome-grid.umd.js examples/vue-awesome-grid.umd.js",
+    "copyToExample": "yes | cp  dist/vue-awesome-grid.umd.js docs/vue-awesome-grid.umd.js",
     "linter": "node_modules/.bin/eslint ./src --ext vue,js"
   },
   "devDependencies": {
