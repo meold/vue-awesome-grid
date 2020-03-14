@@ -21,7 +21,7 @@
     "linter": "node_modules/.bin/eslint ./src --ext vue,js"
   },
   "devDependencies": {
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "babel-eslint": "^10.0.3",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
