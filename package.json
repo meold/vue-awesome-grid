@@ -28,7 +28,7 @@
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-vue": "^6.1.2",
     "jquery": "^3.4.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "rollup": "^1.29.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
