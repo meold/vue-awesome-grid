@@ -2,7 +2,7 @@
   <thead>
     <transition-group name="fade" tag="tr">
       <th v-for="(col, id) in columns"
-        :key="col.title || col.field || id"
+        :key="(col.title || col.field || id) + _uid"
         :class="col.thClass || null">
           <a href="#" @click.prevent="handleClick(col.field)" v-if="col.sortable">
             {{ col.title }}
@@ -17,12 +17,12 @@
 </template>
 
 <script>
+
 import props from '../mixins/gridProps.vue';
 
 export default {
   name: 'gridHeader',
   mixins: [ props ],
-
   data: () => {
     return {
       order: '',
