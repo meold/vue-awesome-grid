@@ -2,7 +2,7 @@
   <thead>
     <transition-group name="fade" tag="tr">
       <th v-for="(col, id) in columns"
-        :key="(col.title || col.field || id) + _uid"
+        :key="id"
         :class="col.thClass || null">
           <a href="#" @click.prevent="handleClick(col.field)" v-if="col.sortable">
             {{ col.title }}
