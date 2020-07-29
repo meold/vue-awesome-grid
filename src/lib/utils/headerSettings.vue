@@ -42,7 +42,7 @@
         </button>
 
         <div class="dropdown-menu visibility-dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <div class="column" v-for="(col, id) in filteredColumnsArray" :key="col.id || col.title || col.field || id">
+          <div class="column" v-for="(col, id) in filteredColumnsArray" :key="col.id || id">
             <label class="custom-control custom-checkbox" @click.stop>
               <input
                 class="custom-control-input"

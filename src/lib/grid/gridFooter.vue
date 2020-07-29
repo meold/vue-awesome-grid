@@ -5,7 +5,7 @@
         v-for="(col, id) in columns"
         :style="col.tdStyle || null"
         :class="col.tdClass || null"
-        :key="'summary' + col.title || col.field || id">
+        :key="'summary' + id">
 
         <div
           v-if="col.render"

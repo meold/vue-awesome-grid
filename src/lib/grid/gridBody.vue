@@ -5,7 +5,7 @@
         <tr
           :class="[{ 'shown': row.__nested__ && row.__nested__.visible}]"
           :key="row.id || rowId">
-          <td v-for="(column, id) in columns" :key="column.title || column.field || id" :style="column.tdStyle || null" :class="tdClass(column, row)" @click="onCellClicked(row, column, rowId)">
+          <td v-for="(column, id) in columns" :key="id" :style="column.tdStyle || null" :class="tdClass(column, row)" @click="onCellClicked(row, column, rowId)">
             <component
               v-if="column.tdComp"
               :is="getComponent(column.tdComp)"

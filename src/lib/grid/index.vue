@@ -4,7 +4,7 @@
       <colgroup>
         <col
           v-for="(col, id) in columns"
-          :key="col.title || col.field || id">
+          :key="id">
       </colgroup>
 
       <grid-header v-bind="propsForGrid" />
