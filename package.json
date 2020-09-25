@@ -1,16 +1,30 @@
 {
   "name": "vue-awesome-grid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue 2.0 datatables alternative to jQuery datatables",
   "main": "dist/vue-awesome-grid.umd.js",
   "module": "dist/vue-awesome-grid.esm.js",
   "unpkg": "dist/vue-awesome-grid.min.js",
+  "author": {
+    "name": "Yuriy Yazupol",
+    "email": "yura.yazupol.official@gmail.com"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meold/vue-awesome-grid.git"
+  },
+  "homepage": "https://meold.github.io/vue-awesome-grid/",
   "private": false,
   "files": [
     "dist/*",
     "src/*",
     "!index.hml"
+  ],
+  "keywords": [
+    "vue",
+    "datatables",
+    "grid"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js && npm run copyToExample",
