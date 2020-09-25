@@ -6,7 +6,7 @@
   "module": "dist/vue-awesome-grid.esm.js",
   "unpkg": "dist/vue-awesome-grid.min.js",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "files": [
     "dist/*",
     "src/*",
@@ -21,24 +21,24 @@
     "linter": "node_modules/.bin/eslint ./src --ext vue,js"
   },
   "devDependencies": {
-    "acorn": "^7.1.1",
-    "babel-eslint": "^10.0.3",
-    "cross-env": "^6.0.3",
-    "eslint": "^6.8.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-vue": "^6.1.2",
-    "jquery": "^3.5.0",
-    "minimist": "^1.2.3",
+    "acorn": "^8.0.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.9.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "jquery": "^3.5.1",
+    "minimist": "^1.2.5",
     "rollup": "^1.29.0",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-vue": "^5.1.5",
-    "vue": "^2.6.11",
-    "vue-template-compiler": "^2.6.11"
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.14.1"
   }
 }
