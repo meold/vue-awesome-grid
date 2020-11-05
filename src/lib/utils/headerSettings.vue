@@ -21,8 +21,8 @@
           class="selectpicker"
           data-width="fit"
           data-style="btn-link"
-          v-model="query.limit"
-          @change="query.offset = 0">
+          v-model="queryLimit"
+          @change="pageLimitChanged()">
           <option v-for="(size, id) in pageSizeOptions" :value="size" :key="id">{{ size }}</option>
         </select>
         entries
@@ -103,6 +103,14 @@ export default {
   computed: {
     filteredColumnsArray() {
       return this.columns.filter(col => col.label || col.title);
+    },
+    queryLimit: {
+      get() {
+        return this.query.limit;
+      },
+      set(val) {
+        this.$set(this.query, 'limit', val);
+      }
     }
   },
 
@@ -119,8 +127,11 @@ export default {
     },
 
     doSearch(q) {
-      this.query.offset = 0;
-      this.query.search = q;
+      this.$set(this.query, 'offset', 0);
+      this.$set(this.query, 'search', q);
+    },
+    pageLimitChanged() {
+      this.$set(this.query, 'offset', 0);
     }
   }
 };

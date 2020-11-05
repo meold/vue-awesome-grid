@@ -53,7 +53,7 @@ export default {
 ```
 
 # How it works?
-[initial example](https://meold.github.io/vue-awesome-grid/examples/index.html)
+[demo](https://meold.github.io/vue-awesome-grid/)
 
 
 # Reference
@@ -107,16 +107,12 @@ Row that is located at the bottom of the table and shows additional resulting in
 By default, the summary row is not showing.
 To show it you must set it to object with similar structure, as the row in table.
 
-You can find example in [withSummary](https://meold.github.io/vue-awesome-grid/examples/withSummary.html).
-
 ## `extraProps`
 
 Is used to pass additional properties to nested components.
-For example, you can pass bus object for events (example in [withNested](https://meold.github.io/vue-awesome-grid/examples/withNested.html)).
+For example, you can pass bus object for events.
 
 ## `ROW_UPDATED`
 
 If the data of one row is updated and you don't need to update the whole data object, you can call `ROW_UPDATED` event to update only one row.
 You must pass one parameter to event with the folowing structure: `{ id: idValue, data: newRowData}`.
-
-You can find example in [withNested](https://meold.github.io/vue-awesome-grid/examples/withNested.html).

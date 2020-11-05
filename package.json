@@ -1,10 +1,9 @@
 {
   "name": "vue-awesome-grid",
-  "version": "1.0.2",
+  "version": "1.1.0",
+  "private": false,
   "description": "Vue 2.0 datatables alternative to jQuery datatables",
-  "main": "dist/vue-awesome-grid.umd.js",
-  "module": "dist/vue-awesome-grid.esm.js",
-  "unpkg": "dist/vue-awesome-grid.min.js",
+  "main": ".dist/vue-awesome-grid.umd.js",
   "author": {
     "name": "Yuriy Yazupol",
     "email": "yura.yazupol.official@gmail.com"
@@ -15,11 +14,8 @@
     "url": "git+https://github.com/meold/vue-awesome-grid.git"
   },
   "homepage": "https://meold.github.io/vue-awesome-grid/",
-  "private": false,
   "files": [
-    "dist/*",
-    "src/*",
-    "!index.hml"
+    "dist/*"
   ],
   "keywords": [
     "vue",
@@ -27,32 +23,52 @@
     "grid"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js && npm run copyToExample",
-    "build:umd": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format umd",
-    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-    "copyToExample": "yes | cp  dist/vue-awesome-grid.umd.js examples/vue-awesome-grid.umd.js",
-    "linter": "node_modules/.bin/eslint ./src --ext vue,js"
+    "serve": "vue-cli-service serve main.js",
+    "build": "vue-cli-service build --target lib --name vue-awesome-grid src/index.js && rm dist/demo.html",
+    "deploy": "./deploy.sh",
+    "_deploy": "NODE_ENV=production vue-cli-service build --target app --name vue-awesome-grid --dest docs main.js",
+    "lint": "vue-cli-service lint"
   },
   "devDependencies": {
-    "acorn": "^8.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@vue/cli-plugin-babel": "~4.5.8",
+    "@vue/cli-plugin-eslint": "~4.5.8",
+    "@vue/cli-service": "~4.5.8",
     "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.9.0",
-    "eslint-plugin-html": "^6.1.0",
-    "eslint-plugin-vue": "^6.2.2",
-    "jquery": "^3.5.1",
-    "minimist": "^1.2.5",
-    "rollup": "^1.29.0",
-    "rollup-plugin-buble": "^0.19.8",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-terser": "^5.2.0",
-    "rollup-plugin-vue": "^5.1.5",
-    "vue": "^2.6.12",
+    "eslint": "^7.12.1",
+    "eslint-plugin-vue": "^7.1.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "node-sass": "^4.14.1"
+    "vue": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "babel": {
+    "presets": [
+      "@vue/cli-plugin-babel/preset"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
   }
 }

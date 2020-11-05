@@ -1,131 +1,129 @@
 .grid {
-    th {
-        white-space: nowrap;
-    }
+  th {
+    white-space: nowrap;
+  }
 }
 
 .table-filters-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 
-    .grid_filter {
-      width: 40%;
-      min-width: 200px;
-      order: 1;
+  .grid_filter {
+    width: 40%;
+    min-width: 200px;
+    order: 1;
 
-      input {
-        padding-left: 45px;
-      }
-
-      label {
-        position: relative;
-        display: block;
-        margin: 0;
-        font-size: 0;
-
-        &::before {
-          font-family: 'Font Awesome 5 Free';
-          font-weight: 900;
-          content: "\F002";
-          position: absolute;
-          left: 16px;
-          top: 7px;
-          color: #aebacb;
-          font-size: 18px;
-        }
-      }
+    input {
+      padding-left: 45px;
     }
 
-    .filter-container {
-      order: 2;
-      & > * {
-        vertical-align: middle;
-      }
+    label {
+      position: relative;
+      display: block;
+      margin: 0;
+      font-size: 0;
 
-      label {
-        font-size: 13px;
-        margin: 0;
-      }
-
-      form {
-        display: inline-block;
-      }
-
-      .visibility-dropdown-menu {
-        padding: 15px;
-
-        .column {
-          border-top: 1px solid #fff;
-
-          label {
-            color: #2c384f;
-            font-size: 14px;
-            margin: 10px 30px 10px 0;
-            min-width: 200px;
-          }
-
-          & + .column {
-            border-top: 1px solid #d7dde5;
-          }
-        }
-
-        .custom-checkbox .custom-control-label {
-          padding-top: 2px;
-          padding-left: 15px;
-        }
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\F002";
+        position: absolute;
+        left: 5px;
+        top: 3px;
+        color: #aebacb;
+        font-size: 18px;
       }
     }
+  }
 
-    .grid_length {
-      order: 3;
-      white-space: nowrap;
-      & > * {
-        vertical-align: middle;
+  .filter-container {
+    order: 2;
+    & > * {
+      vertical-align: middle;
+    }
+
+    label {
+      font-size: 13px;
+      margin: 0;
+    }
+
+    form {
+      display: inline-block;
+    }
+
+    .visibility-dropdown-menu {
+      padding: 15px;
+
+      .column {
+        border-top: 1px solid #fff;
+
+        label {
+          color: #2c384f;
+          font-size: 14px;
+          margin: 10px 30px 10px 0;
+          min-width: 200px;
+        }
+
+        & + .column {
+          border-top: 1px solid #d7dde5;
+        }
       }
-      label {
-        font-size: 13px;
-        margin: 0;
-      }
-      select {
-        background: transparent;
-        padding: 0 10px !important;
-        outline: none !important;
-        box-shadow: none;
-        cursor: pointer;
-        display: inline-block !important;
-        width: 55px;
-        font-size: 13px;
-        font-weight: 400;
+
+      .custom-checkbox .custom-control-label {
+        padding-top: 2px;
+        padding-left: 15px;
       }
     }
+  }
+
+  .grid_length {
+    order: 3;
+    white-space: nowrap;
+    & > * {
+      vertical-align: middle;
+    }
+    label {
+      font-size: 13px;
+      margin: 0;
+    }
+    select {
+      background: transparent;
+      padding: 0 5px !important;
+      outline: none !important;
+      box-shadow: none;
+      cursor: pointer;
+      display: inline-block !important;
+      width: 55px;
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
 }
 
 .grid-footer {
-    font-size: 13px;
-    margin-top: 20px;
+  font-size: 13px;
+  margin-top: 20px;
 }
 
 ul.pagination {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .summaryRow {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .table-responsive {
   padding: 15px;
 
   background-image:
-    /* Shadow covers */
-    linear-gradient(90deg, white 30%, rgba(255,255,255,0)),
-    linear-gradient(90deg, rgba(255,255,255,0), white 70%),
-    /* Shadows */
-    radial-gradient(farthest-side at 0 50%, rgba(0,0,0,.2), rgba(0,0,0,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(0,0,0,.2), rgba(0,0,0,0));
+    /* Shadow covers */ linear-gradient(90deg, white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0), white 70%),
+    /* Shadows */ radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   background-repeat: no-repeat;
   background-color: white;
   background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
@@ -134,7 +132,7 @@ ul.pagination {
 
   /* Fix rounding artefact */
   &::before {
-    content: '';
+    content: "";
     width: 2px;
     position: absolute;
     top: 0;
@@ -144,7 +142,7 @@ ul.pagination {
     z-index: 1;
   }
   &::after {
-    content: '';
+    content: "";
     width: 2px;
     position: absolute;
     top: 0;

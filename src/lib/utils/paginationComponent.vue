@@ -140,8 +140,8 @@ export default {
       if (typeof $ === 'undefined') {
         return;
       }
-
-      const el = $('.selectpicker');
+      
+      const el = window.$('.selectpicker');
       if (!el || el.length <= 0) {
         return;
       }
@@ -154,7 +154,7 @@ export default {
     },
 
     pageClick(n) {
-      this.query.offset = (n - 1) * this.query.limit;
+      this.$set(this.query, 'offset', (n - 1) * this.query.limit);
     },
 
     changePageTo(i) {
@@ -162,7 +162,7 @@ export default {
         return;
       }
 
-      this.query.offset += i * this.query.limit;
+      this.$set(this.query, 'offset', this.query.offset + i * this.query.limit);
     }
   }
 };
