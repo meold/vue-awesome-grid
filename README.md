@@ -3,6 +3,10 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
+
+# How it works?
+[demo](https://meold.github.io/vue-awesome-grid/)
+
 # Build the component
 
 ```
@@ -51,9 +55,6 @@ export default {
 }
 </script>
 ```
-
-# How it works?
-[demo](https://meold.github.io/vue-awesome-grid/)
 
 
 # Reference
