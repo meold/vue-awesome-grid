@@ -1,9 +1,9 @@
 {
   "name": "vue-awesome-grid",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "private": false,
   "description": "Vue 2.0 datatables alternative to jQuery datatables",
-  "main": ".dist/vue-awesome-grid.umd.js",
+  "main": "dist/vue-awesome-grid.umd.js",
   "author": {
     "name": "Yuriy Yazupol",
     "email": "yura.yazupol.official@gmail.com"
@@ -35,10 +35,10 @@
     "@vue/cli-plugin-eslint": "~4.5.8",
     "@vue/cli-service": "~4.5.8",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.12.1",
+    "eslint": "^7.13.0",
     "eslint-plugin-vue": "^7.1.0",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.0.5",
+    "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
