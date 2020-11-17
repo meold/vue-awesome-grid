@@ -141,7 +141,8 @@ export default {
         return;
       }
       
-      const el = window.$('.selectpicker');
+      // eslint-disable-next-line no-undef
+      const el = $('.selectpicker');
       if (!el || el.length <= 0) {
         return;
       }
