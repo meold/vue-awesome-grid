@@ -72,6 +72,7 @@ export default {
 | headerSettings | whether to render headerSettings | boolean | true | No |
 | pagination | whether to render pagination | boolean | true | No |
 | pageSizeOptions | options for page size select | array | [10, 25, 100] | No |
+| noDataPlaceholder | placeholder for grid in case empty data in table | string | (No Data) | No |
 | extraProps | object for extra props, which will be passed to dynamic components | object | - | No |
 
 ## `columns`

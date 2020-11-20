@@ -39,6 +39,10 @@ export default {
       type: Boolean,
       default: true
     },
+    noDataPlaceholder: {
+      type: String,
+      default: '(No Data)'
+    },
     extraProps: {
       type: Object
     }

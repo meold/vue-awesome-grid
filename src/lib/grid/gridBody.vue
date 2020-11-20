@@ -43,7 +43,7 @@
     </template>
 
     <tr v-else>
-      <td :colspan="columns.length" class="text-center text-muted">(No Data)</td>
+      <td :colspan="columns.length" class="text-center text-muted">{{ noDataPlaceholder }}</td>
     </tr>
   </tbody>
 </template>
