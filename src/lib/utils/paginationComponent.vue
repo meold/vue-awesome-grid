@@ -2,10 +2,10 @@
   <div class="grid-footer row">
     <div class="col-sm-5" role="status" aria-live="polite" v-if="total">
       <template v-if="isFiltered">
-        {{ getCurrentVisibleLabel}} of {{ filtered }} (from {{ total }})
+        {{ getCurrentVisibleLabel}} {{ of }} {{ filtered }} ({{ from }} {{ total }})
       </template>
       <template v-else>
-        {{ getCurrentVisibleLabel }} of {{ total }}
+        {{ getCurrentVisibleLabel }} {{ of }} {{ total }}
       </template>
     </div>
 
@@ -122,6 +122,22 @@ export default {
 
       const i = currentPage;
       return [1, 0, i-2, i-1, i, i+1, i+2, 0, n];
+    },
+
+    of() {
+      if (this.$i18n && this.$t) {
+        return this.$t('vueAwesomeGrid.of');
+      }
+
+      return 'of';
+    },
+
+    from() {
+      if (this.$i18n && this.$t) {
+        return this.$t('vueAwesomeGrid.from');
+      }
+
+      return 'from';
     }
   },
 
