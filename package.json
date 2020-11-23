@@ -1,6 +1,6 @@
 {
   "name": "vue-awesome-grid",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "private": false,
   "description": "Vue 2.0 datatables alternative to jQuery datatables",
   "main": "dist/vue-awesome-grid.umd.js",

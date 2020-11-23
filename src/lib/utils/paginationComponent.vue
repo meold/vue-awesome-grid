@@ -12,7 +12,7 @@
     <div class="col-sm-7" v-if="isPaginationVisible">
       <nav>
         <ul class="pagination">
-          <li v-if="!isFirstPage" class="paginate_button page-item previous" @click="changePageTo(-1)">
+          <li v-show="!isFirstPage" class="paginate_button page-item previous" @click="changePageTo(-1)">
             <a href="#" class="page-link" @click.prevent><span aria-hidden="true">&laquo;</span></a>
           </li>
 
@@ -29,7 +29,7 @@
             </a>
           </li>
 
-          <li v-if="!isLastPage" class="paginate_button page-item next" @click="changePageTo(1)">
+          <li v-show="!isLastPage" class="paginate_button page-item next" @click="changePageTo(1)">
             <a href="#" class="page-link" @click.prevent><span aria-hidden="true">&raquo;</span></a>
           </li>
         </ul>
