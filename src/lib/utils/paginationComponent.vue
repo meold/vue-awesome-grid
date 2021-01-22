@@ -153,12 +153,16 @@ export default {
     // in case jquery select picker is used
     // https://developer.snapappointments.com/bootstrap-select/
     refreshSelectPicker() {
-      if (typeof $ === 'undefined') {
+      if (typeof $ === 'undefined' && typeof window.$ === 'undefined') {
         return;
       }
-      
+
       // eslint-disable-next-line no-undef
-      const el = $('.selectpicker');
+      let el = $('.selectpicker');
+      if (window.$) {
+        el = window.$('.selectpicker');
+      }
+
       if (!el || el.length <= 0) {
         return;
       }

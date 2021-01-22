@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import VueAwesomeGrid from "./src/index";
+import { VueAwesomeGrid } from "./src/index";
 
 export default {
   components: {

@@ -22,7 +22,7 @@ $ npm run build
 
 ```js
 import Vue from 'vue';
-import VueAwesomeGrid from 'vue-awesome-grid';
+import { VueAwesomeGrid } from 'vue-awesome-grid';
 
 Vue.use(VueAwesomeGrid);
 ```
